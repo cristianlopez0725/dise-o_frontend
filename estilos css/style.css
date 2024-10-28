@@ -1,0 +1,570 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+:root{
+    --primario:#61B1CB;
+    --texto:#181818;
+    --light:#f1f1f1;
+    --sombra:0.5rek 1.5rem rgba(0,0,0,1);
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "poppins", "roboto";
+    font-weight: 200;
+    text-decoration: none;
+    color: var(--texto);}
+    .icons i,
+    .icons a {
+        cursor: pointer;
+        margin-left: 10px;
+        height: 40px;
+        width: 40px;
+        border-radius: 50%;
+        background-color: var(--primario);
+        line-height: 40px;
+        font-size: 1.2rem;
+        color: var(--light);
+        text-align: center;
+        transition: transform 0.5s;
+    }
+    
+    .icons i:hover,
+    .icons a:hover {
+        color: var(--texto);
+        transform: rotate(360deg);
+    }
+    
+    @media (max-width: 768px) {
+        .navbar {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background: rgba(24, 24, 24, 0.95);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 1rem;
+            display: none;
+        }
+    
+        .navbar.active {
+            display: block;
+        }
+    
+        .navbar a {
+            display: block;
+            padding: 1rem 0;
+            font-size: 1.5rem;
+            color: var(--light);
+            text-align: center;
+            border-bottom: none;
+        }
+    
+        .icons #menu-bars {
+            display: inline-block;
+            font-size: 1.8rem;
+            color: var(--light);
+        }
+    }
+    
+html{
+    scroll-behavior: smooth;
+}
+#home{
+    background: linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.4)),url(https://clinicaveterinariasaojoao.pt/wp-content/uploads/2016/04/dia-do-veterinario-19.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+}
+header {
+    background-color: rgba(97, 176, 203, 0.368); 
+    padding: 1rem 7%;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 100;
+    box-shadow: var(--sombra);
+    width: 100%;
+    backdrop-filter: blur(10px);
+}
+
+.main-logo img {
+    width: 100px;
+    height: auto;
+}
+
+.navbar a {
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    color: var(--texto);
+    font-weight: 400;
+    border-bottom: 2px solid transparent;
+    transition: color 0.3s, border-bottom 0.3s;
+}
+
+.navbar a.active,
+.navbar a:hover {
+    color: var(--primario);
+    border-bottom: 2px solid var(--primario);
+    font-weight: 500;
+}
+
+
+@media (max-width: 768px) {
+    .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: rgba(24, 24, 24, 0.95);
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        padding: 1rem;
+        display: none;
+    }
+
+    .navbar.active {
+        display: block;
+    }
+
+    .navbar a {
+        display: block;
+        padding: 1rem 0;
+        font-size: 1.5rem;
+        color: var(--light);
+        text-align: center;
+        border-bottom: none;
+    }
+}
+.btn-agendar {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.8rem 1.2rem;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #fff;
+    background-color: var(--primario);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+    margin-top: 15px;
+    text-transform: uppercase;
+}
+
+.btn-agendar i {
+    font-size: 1.2rem;
+    line-height: 1;
+}
+
+.btn-agendar:hover {
+    background-color: #4a8b9c;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+    transform: translateY(-2px);
+}
+
+.btn-agendar:active {
+    transform: translateY(0);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+
+
+#home .contenido .presentacion{
+    max-width: 1200px;
+    height: 100vh;
+    margin: auto;
+    color: var(--light);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--light);
+}   
+#home .contenido .presentacion .mensaje{
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    color: var(--light);
+}
+#home .contenido .presentacion p, span{
+    font-size: 1.2rem;
+    color: var(--light);
+    font-weight: 200;
+}
+#home .contenido .presentacion span{
+    color: var(--primario);
+}
+#home .contenido .presentacion span {
+    color: var(--primario);
+    font-size: 2.5rem;
+    font-weight: 400;
+}
+
+#home .contenido .presentacion .descripcion{
+    text-align: center;
+    color: var(--light);
+    margin: 20px auto;
+    max-width: 800px;
+}
+
+
+#about {
+    max-width: 90%;
+    margin: 60px auto;
+    padding: 60px 30px;
+    text-align: center;
+}
+
+#about {
+    font-weight: 600;
+    text-align: center;
+    letter-spacing: 2px;
+    font-size: 16PX;
+}
+
+.equipo {
+    display: flex;
+    flex-direction: row;
+    gap: 100px ;
+    overflow: hidden;
+    padding-top: 30px;
+    width: 100%;
+    
+}
+.equipo .equipo-imagen {
+    position: relative;
+    width: 250px;
+    height: 250px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    
+}
+
+.equipo .equipo-imagen .nombre {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 0 0 10px 10px;
+}
+
+.equipo .equipo-imagen:hover {
+    background-color: var(--primario);
+    width: 250px;
+    height: 300px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 3s ease;
+}
+
+.equipo .equipo-imagen img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+#service{
+    padding: 100px 20px;
+    text-align: center;
+    background-color: #f8f8f8;
+    letter-spacing: 2px;
+}
+#service .row {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1100px;
+    margin: 60px auto;
+    gap: 20px; 
+}
+
+#service .row .servicio {
+    max-width: 350px;
+    background-color: #fff;
+    padding: 20px 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+} 
+#service .row .servicio:hover{
+    box-shadow: var(--sombra);
+    background-color: var(--primario);
+}
+#service .row .servicio h3{
+    color: #000000;
+    font-weight: 500;
+}
+#service .row .servicio .icon{
+    width: 60px;
+    height: 60px;
+    background-color: var(--primario);
+    border-radius: 100%;
+    padding: 20px;
+    display: inline-block;
+}
+#contactus {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+#contactus .titulo {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #000000;
+    margin-bottom: 20px;
+}
+
+.inputBox {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.inputBox .input {
+    flex: 1;
+    min-width: 220px;
+}
+
+.inputBox .input span {
+    display: block;
+    font-weight: 500;
+    color: #000000;
+    margin-bottom: 5px;
+}
+
+.inputBox .input input,
+.inputBox .input textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #747474;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+textarea {
+    resize: none;
+}
+
+.action {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.action .btn {
+    background-color: var(--primario);
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.action .btn:hover {
+    background-color: #4a8b9c;
+}
+
+
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+footer {
+    background-color: #191919;
+    padding: 20px;
+    margin-top: auto;
+    width: 100%;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+
+
+.copyrighttexto {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 10px;
+    font-size: 0.8rem;
+    color: #ccc;
+    width: 75%;
+    position: absolute;
+    bottom: 0;
+}
+
+.footer-icon {
+    position: absolute;
+    top: 0px;
+    right: 10px;
+}
+.social-icons {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.social-icons a {
+    color: #fff;
+    font-size: 1.4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    background-color: var(--primario);
+    border-radius: 50%;
+    transition: background-color 0.3s;
+}
+
+.social-icons a:hover {
+    background-color: #4a8b9c;
+}
+.footer-icon a {
+    background-color: var(--primario);
+    color: #fff;
+    padding: .3rem;
+    border-radius: .3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-icon a i {
+    font-size: 1.4rem;
+}
+
+.footer-icon a:hover::before {
+    height: 100%;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    color: var(--texto);
+}
+
+@media (max-width: 768px) {
+    header {
+        padding: 1rem 5%;
+        flex-direction: column;
+    }
+
+    .navbar {
+        display: none;
+        flex-direction: column;
+    }
+
+    .navbar.active {
+        display: flex;
+    }
+
+    .navbar a {
+        padding: 1rem;
+        font-size: 1.2rem;
+        color: var(--light);
+        text-align: center;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+
+    #home .contenido .presentacion {
+        text-align: center;
+        padding: 0 2rem;
+    }
+
+    #home .contenido .presentacion .mensaje {
+        font-size: 2rem;
+    }
+
+    #home .contenido .presentacion .descripcion {
+        font-size: 1rem;
+    }
+
+    .btn-agendar {
+        font-size: 0.9rem;
+        padding: 0.6rem 1rem;
+    }
+
+  
+    #service .row {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #service .row .servicio {
+        max-width: 90%;
+        margin-bottom: 20px;
+    }
+
+    .equipo {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .equipo .equipo-imagen {
+        width: 180px;
+        height: 180px;
+    }
+
+    #contactus .inputBox {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    #contactus .inputBox .input {
+        width: 100%;
+    }
+
+    /* Footer */
+    .footer-icon {
+        top: -10px;
+        right: 10px;
+    }
+}
+
+
+@media (max-width: 480px) {
+
+    #home .contenido .presentacion .mensaje {
+        font-size: 1.8rem;
+    }
+
+    .btn-agendar {
+        font-size: 0.8rem;
+    }
+
+    .navbar a {
+        font-size: 1rem;
+    }
+
+    .equipo .equipo-imagen {
+        width: 150px;
+        height: 150px;
+    }
+}
+
+
+
